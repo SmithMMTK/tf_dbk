@@ -1,2 +1,3 @@
 location = "southeastasia"
-rg = "az_tf_dbk"
+rg = "aztfdbk3"
+databricks_workspace = "tfdbk3"

@@ -7,3 +7,8 @@ variable "location" {
   type = "string"
   description = "Location to create resource"
 }
+
+variable "databricks_workspace" {
+  type = "string"
+  description = "Databricks workspace name"
+}
