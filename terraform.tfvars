@@ -1,3 +1,4 @@
 location = "southeastasia"
-rg = "aztfdbk3"
-databricks_workspace = "tfdbk3"
+rg = "aztfdbk6"
+databricks_workspace = "tfdbk6"
+PAT = "11223344"

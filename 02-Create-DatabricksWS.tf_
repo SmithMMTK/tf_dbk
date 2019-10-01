@@ -4,9 +4,20 @@ resource "azurerm_databricks_workspace" "databricks_workspace" {
   resource_group_name = "${azurerm_resource_group.master_rg.name}"
   location            = "${azurerm_resource_group.master_rg.location}"
   sku                 = "premium"
-
+  
+  
+  provisioner "local-exec" {
+  
+    command = "echo $(date) $FOO $BAR $BAZ $PAT >> env_vars.txt"
+    environment = {
+      FOO = "bar"
+      BAR = 1
+      BAZ = "true"
+      PAT = "${var.PAT}"
+    }
+  }
+  
   tags = {
     Environment = "Databricks by Terraform script"
   }
 }
-
